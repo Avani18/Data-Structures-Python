@@ -13,7 +13,7 @@ class LinkedList:
 	def __init__(self):
 		self.head= None
 
-#Function to print the Linked List starting with the give node			
+#Function to print the Linked List		
 	def printList(self):
 		temp= self.head
 		
