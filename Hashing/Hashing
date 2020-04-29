@@ -1,0 +1,18 @@
+HASHING 
+
+Hash function converts a bigger value to small and practical value that can be used as index in a hash table. A good hash function should have the following properties- 
+1. Efficientlt computable 
+2. Should uniformly distrubute the keys
+
+Hash table is an array that stores pointers to records corresponding to a large number. An entry in hash table is NIL if no existing large number has hash function value equal to the index for the entry.
+
+Collisions occur when there are two large numbers which when applied to the hash function result in the same value. The situation where a newly inserted key maps to an already occupied slot in hash table is called collision and must be handled using some collision handling technique. There are 2 techniques for the same- 
+1. Chaining
+2. Open Addressing 
+
+Chaining- We make each cell of the hash table point to a linked list of records that have the same hash function value. It is simple to implement, hash table never fills up and less sensitive to the hash function. We mostly use this technique when the number of keys are unknown. It does not have a good cache performance and wastes a lot of space. 
+
+Open Addressing- In this, all elements are stored in the hash table itself. If a certain hash value field is already occupied and another element with the same hash value turns up, then it is stored in the next available slot. Looking for the next empty slot is called probing. In Linear Probing, we linearly probe for the next slot. It faces the problem of clustering as many consecutive elements form groups and it takes time to find a new free slot or to search an element. In Quadratic Probing, we look for i^2th slot. Open Addressing requires more computation and table may also become full. This is used when the number of keys is known initially. It has better cache performance. 
+
+
+Referred from GeeksForGeeks
